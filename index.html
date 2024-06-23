@@ -5,21 +5,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="referrer" content="always">
-    <title>语言跳转中...</title>
-    <meta name="keywords" content="东经雨,东经雨的博客,东经雨博客">
+    <title>Loading...</title>
+    <meta name="keywords" content="东经雨">
     <link rel="canonical" href="https://Dong-Jing-Yu.github.io/">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="renderer" content="webkit">
     <meta name="force-rendering" content="webkit">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0,shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#2B2B35">
-    <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
-    <script src="/js/main.js"></script>
-    <script src="/js/language.js"></script>
+    <script>
+        var lang = navigator.language
+        console.log("当前浏览器请求语言" + lang);
+        if (lang == "zh-CN") { // 中文
+            console.log("跳转中文版本") // 默认中文版本
+            window.location.href = "./zh_CN" // 跳转中文版本页面
+        }
+        else if (lang == "en-US") { // 英文
+            console.log("跳转英文版本")
+            window.location.href = "./en_US"
+        }
+        else {
+            console.log("跳转中文版本") // 默认中文版本
+            window.location.href = "./zh_CN"
+        }
+    </script>
 </body>
 
 </html>
